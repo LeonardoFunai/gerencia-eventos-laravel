@@ -1,0 +1,139 @@
+/* Aplica um gradiente de fundo em todo o projeto */
+body {
+    padding-top: 30px;
+    background: linear-gradient(0deg, #ff4400, #ff8000);
+    background-size: cover;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #000000;
+}
+.h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 30px;
+}
+
+.til1 {
+    width: 600px;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background: #88410343;
+    padding: 15px;
+    border-radius: 15px;
+    
+    display: inline-block;
+}
+/* Navbar */
+nav {
+    background-color: #3d3d3d;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav a {
+    width: 150px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #e60073, #ffcc00);
+}
+
+nav a:hover {
+    background: linear-gradient(45deg, #ffcc00, #e60073);
+    transform: scale(1.05);
+}
+
+
+.card {
+    max-width: 750px;
+    margin: 30px auto;
+    background: #3d3d3d;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    color: rgb(0, 0, 0);
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.card-body p {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 8px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #666;
+}
+
+.card-body p:last-child {
+    border-bottom: none;
+}
+
+.card-body a {
+    color: #00d0ff;
+    text-decoration: none;
+}
+
+.card-body a:hover {
+    text-decoration: underline;
+}
+
+/* Botões */
+.btn-cadastrar{
+    background: linear-gradient(225deg, #55fc7c, #04e4f0);
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.editar{
+    
+    background: linear-gradient(45deg, #fae900, #f79d02);
+    
+}
+.editar:hover {
+    background: linear-gradient(225deg, #fae900, #f79d02);
+    transform: scale(1.05);
+}
+
+.apagar{
+    background: linear-gradient(225deg, #fc7443, #f80404);
+    
+}
+.apagar:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #fc7443, #f80404);
+    
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .card {
+        max-width: 90%;
+        padding: 20px;
+    }
+    .til1 {
+        width: 100%;
+    }
+    .card-body p {
+        text-align: center;
+    }
+}

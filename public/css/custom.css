@@ -1,0 +1,236 @@
+/* Aplica um gradiente de fundo em todo o projeto */
+body {
+    padding-top: 50px;
+    background: linear-gradient(0deg, #ff4400, #ff8000);
+    background-size: cover;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+nav {
+    background-color: #3d3d3d;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+nav a {
+    width: 150px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #e60073, #ffcc00);
+}
+nav a:hover {
+    background: linear-gradient(45deg, #ffcc00, #e60073);
+    transform: scale(1.05);
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-custom {
+        text-align: center;
+    }
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar-nav .nav-item {
+        margin: 5px 0;
+    }
+}
+
+
+.titulo {
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+/* Ajuste dos cards para ficarem mais suaves e alinhados */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 30px;
+}
+
+.til1 {
+    width: 600px;
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background: #88410343;
+    padding: 15px;
+    border-radius: 15px;
+    
+    display: inline-block;
+}
+
+
+
+/* Estilização uniforme dos botões */
+.btn {
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 8px 12px;
+}
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Botões com cores exatas conforme a imagem */
+.btn-visualizar {
+    background: linear-gradient(45deg, #00d0ff, #02b1d8);
+    border: none;
+    color: white;
+}
+.btn-visualizar:hover {
+    background: linear-gradient(225deg, #00d0ff, #03a3c7);
+    transform: scale(1.05);
+}
+
+
+.apagar{
+    background: linear-gradient(225deg, #fc7443, #f80404);
+    
+}
+.apagar:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #fc7443, #f80404);
+    
+}
+
+.editar{
+    background: linear-gradient(45deg, #fae900, #f79d02);
+    
+}
+.editar:hover {
+    background: linear-gradient(225deg, #fae900, #f79d02);
+    transform: scale(1.05);
+}
+
+.btn-cadastrar{
+    background: linear-gradient(225deg, #55fc7c, #04e4f0);
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+.btn-filtro {
+    background: linear-gradient(45deg, #e60073, #ffcc00);
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    
+}
+.btn-cadastrar:hover{
+    background: linear-gradient(225deg, #04e4f0, #55fc7c);
+}
+.btn-filtro:hover {
+    background: linear-gradient(225deg, #dd2e02, #faa811);
+}
+
+/* Ajuste de tabelas para manter alinhamento */
+.table {
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.table th {
+    background-color: #ff9800;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+}
+.table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Ajuste do container de filtro */
+#filtroContainer {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade otimizada */
+@media (max-width: 768px) {
+    .hstack {
+        flex-direction: column;
+    }
+    .btn {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .table-responsive {
+        overflow-x: auto;
+    }
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Estiliza inputs e labels animados */
+.inputUser {
+    background: none;
+    border: none;
+    border-bottom: solid white;
+    outline: none;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    letter-spacing: 1px;
+    padding: 5px;
+}
+.labelinput {
+    position: absolute;
+    top: 35px;
+    left: 20px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.inputUser:focus ~ .labelinput,
+.inputUser:valid ~ .labelinput {
+    top: -5px;
+    font-size: 1.1em;
+    color: #ff4500;
+    font-weight: bold;
+}
+.inputbox {
+    position: relative;
+    padding-top: 30px;
+}
+.labeledit {
+    color: #ff4500;
+    font-weight: bold;
+}
+
