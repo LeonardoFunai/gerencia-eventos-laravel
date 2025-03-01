@@ -21,8 +21,8 @@
         @csrf
 
         <div class="form-group">
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome" class="form-control" required>
+            <label for="name">Nome:</label>
+            <input type="text" name="name" class="form-control" required>
         </div>
         
         <div class="row">

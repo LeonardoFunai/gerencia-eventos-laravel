@@ -17,8 +17,8 @@ class EventController extends Controller
         $query = Event::query();
 
         // Aplicando filtros
-        if ($request->filled('nome')) {
-            $query->where('nome', 'like', '%' . $request->nome . '%');
+        if ($request->filled('name')) {
+            $query->where('name', 'like', '%' . $request->name . '%');
         }
         if ($request->filled('tipo')) {
             $query->where('tipo', $request->tipo);
@@ -43,6 +43,7 @@ class EventController extends Controller
     public function store(EventRequest $request)
     {
         $data = $request->validated();
+        $data['name'] = $request->name;
         $data['descricao'] = $request->descricao ?? null;
         $data['link_endereco'] = $request->link_endereco ?? null;
     
@@ -59,10 +60,10 @@ class EventController extends Controller
         return view('events.edit', compact('event'));
     }
 
-
     public function update(EventRequest $request, Event $event)
     {
         $data = $request->validated();
+        $data['name'] = $request->name;
         $data['descricao'] = $request->descricao ?? null;
         $data['link_endereco'] = $request->link_endereco ?? null;
     

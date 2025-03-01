@@ -24,8 +24,8 @@
             @method('PUT')
             
             <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" name="nome" class="form-control" value="{{ $event->nome }}" maxlength="255" required>
+                <label for="name">Nome:</label>
+                <input type="text" name="name" class="form-control" value="{{ $event->name }}" maxlength="255" required>
             </div>
             
             <div class="row">

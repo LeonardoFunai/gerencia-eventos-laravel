@@ -79,7 +79,7 @@
                     @foreach($events as $event)
                         <tr>
                             <td>{{ ucfirst($event->tipo) }}</td>
-                            <td>{{ $event->nome }}</td>
+                            <td>{{ $event->name }}</td>
                             <td>{{ $event->endereco }}</td>
                             <td>{{ \Carbon\Carbon::parse($event->data_hora)->format('d/m/Y') }}</td>
                             <td>{{ \Carbon\Carbon::parse($event->data_hora)->format('H:i') }}</td>
