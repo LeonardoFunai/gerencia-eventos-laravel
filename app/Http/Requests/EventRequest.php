@@ -13,9 +13,11 @@ class EventRequest extends FormRequest
 
     public function rules()
     {
+        $eventId = optional($this->route('event'))->id;
+
         return [
             'tipo' => 'required|string',
-            'name' => 'required|string|max:255|unique:events,name',
+            'name' => 'required|string|max:255|unique:events,name,' . $eventId,
             'descricao' => 'nullable|string|max:1000',  
             'endereco' => 'required|string|max:255',
             'link_endereco' => 'nullable|url|max:500', 
@@ -33,7 +35,4 @@ class EventRequest extends FormRequest
             'preco.numeric' => 'O preço deve ser um número válido.',
         ];
     }
-    
-    
 }
-
